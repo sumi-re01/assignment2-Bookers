@@ -2,13 +2,9 @@
 <p id="notice"><%= flash[:notice] %></p>
 
 <!--show-->
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
+<p><strong>Title:</strong> <%= @book.title %>
 </p>
-<p>
-  <strong>Body:</strong>
-  <%= @book.body %>
+<p><strong>Body:</strong> <%= @book.body %>
 </p>
 <span class="button">
 <%= link_to 'Edit', edit_book_path(@book) %></span>

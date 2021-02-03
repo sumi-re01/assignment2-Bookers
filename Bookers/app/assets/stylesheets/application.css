@@ -25,7 +25,7 @@ body {
   font-size: 80%;
 }
 
-.heading {
+h1, h2 {
   font-family: 'Roboto Mono', monospace;
   line-height: 18px;
 }
@@ -33,7 +33,6 @@ body {
 p {
   margin: 33px;
 }
-
 
 /*サクセスメッセージ*/
 #notice {
@@ -70,14 +69,25 @@ p {
 /*一覧*/
 table {
   width: 800px;
+  table-layout: fixed;
+}
+#book-title {
+  width: 24%;
+}
+#book-body {
+  width: 50%;
 }
 
 th {
-  padding-bottom: 5px
+  padding-bottom: 5px;
 }
 
 td {
-  padding: 0 5px 5px;
+  padding: 0 5px 7px 5px;
+}
+
+.button {
+  padding: 0px 5px 7px 5px;
 }
 
 /*投稿フォーム*/
