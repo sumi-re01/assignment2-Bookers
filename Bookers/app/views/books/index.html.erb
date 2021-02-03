@@ -43,6 +43,8 @@
 <!--新期投稿-->
 <h2 class="heading">New book</h2>
 <%= form_with model:@book, local: true do |f| %>
+<!--バリデーションエラー表示部分(_errors.html)の読み込み-->
+<%= render 'errors', model: f.object%>
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
