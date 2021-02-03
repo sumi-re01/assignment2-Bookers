@@ -1,14 +1,17 @@
-<h1 class="heading">Books</h1>
+<!--success message-->
+<p id="notice"><%= flash[:notice] %></p>
+
+<!--index-->
 <!--要件tableタグを使用：参考↓
-　　https://developer.mozilla.org/ja/docs/Web/HTML/Element/table-->
+　　https://developer.mozilla.org/ja/docs/Web/HTML/Element/table
+　　colgroupのある表-->
+<h1 class="heading">Books</h1>
 <table>
+  <colgroup span="3"></colgroup>
   <thead>
     <tr>
       <th>Title</th>
       <th>Body</th>
-      <th colspan="1">
-      <!--表の空白について要確認
-        　https://www.w3.org/WAI/tutorials/tables/irregular/-->
     </tr>
   </thead>
   <tbody>
@@ -21,13 +24,16 @@
         <%= book.body %>
       </td>
       <td>
-        <%= link_to 'Show', book_path(book.id) %>
+        <span class="button">
+        <%= link_to 'Show', book_path(book) %></span>
       </td>
       <td>
-        <%= link_to 'Edit', edit_book_path(book.id) %>
+        <span class="button">
+        <%= link_to 'Edit', edit_book_path(book.id) %></span>
       </td>
       <td>
-        <%= link_to 'Destroy', book_path(book.id), method: :delete %>
+        <span class="button">
+        <%= link_to 'Destroy', book_path(book.id), method: :delete, "data-confirm" => "Are you sure? >>Delete #{book.title}" %></span>
       </td>
     </tr>
     <% end %>

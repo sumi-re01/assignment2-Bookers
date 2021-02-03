@@ -1,3 +1,7 @@
+<!--success message-->
+<p id="notice"><%= flash[:notice] %></p>
+
+<!--show-->
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -6,6 +10,8 @@
   <strong>Body:</strong>
   <%= @book.body %>
 </p>
-<%= link_to 'Edit', edit_book_path(@book) %>
+<span class="button">
+<%= link_to 'Edit', edit_book_path(@book) %></span>
 |
-<%= link_to 'Back', books_path %>
+<span class="button">
+<%= link_to 'Back', books_path %></span>
