@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+
+  # 一覧画面+新期投稿
   def index
     @books = Book.all
     @book = Book.new
@@ -10,9 +12,15 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
   def edit
+  end
+  def update
+  end
+
+  def destroy
   end
 
 
