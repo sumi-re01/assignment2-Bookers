@@ -69,13 +69,9 @@ p {
 /*一覧*/
 table {
   width: 800px;
-  table-layout: fixed;
 }
-#book-title {
+th:nth-child(1) {
   width: 24%;
-}
-#book-body {
-  width: 50%;
 }
 
 th {
