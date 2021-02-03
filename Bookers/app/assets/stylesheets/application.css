@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+.heading {
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  margin: 33px
+}
+
+#notice {
+
+  color: green;
+}
+
+h .heading {
+  line-height: 18px;
+}
+
+
+table {
+  width: 800px;
+  font-size: 80%
+}
+th {
+  padding-bottom: 5px
+}
+td {
+  padding: 0 5px 5px;
+}
+
+p {
+  margin: 33px;
+  font-size: 80%
+}
+
+
+@media screen and (max-width: 800px) {
+
+  table {
+    width: 100%;
+  }
+}
